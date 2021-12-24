@@ -13,7 +13,7 @@ func HitungPrice(price, discount, tax int, ch chan int, hitung string) {
 	if hitung == "pajak" {
 		ch <- price * (100 + tax) / 100
 	} else if hitung == "discount" {
-		ch <- price * (100 - tax) / 100
+		ch <- price * (100 - discount) / 100
 	}
 }
 
